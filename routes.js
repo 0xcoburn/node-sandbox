@@ -9,7 +9,7 @@ const reqListener = (req, res) => {
     res.write("<head><title>form page</title></head>");
     res.write("<body><form action='/message' method='POST'>");
     res.write(
-      "<input type='text' name='msg'><button type='submit'>submit</button>"
+      "<input type='text' name='message'><button type='submit'>submit</button>"
     );
     res.write("</form></body>");
     res.write("</html>");
@@ -23,6 +23,7 @@ const reqListener = (req, res) => {
       body.push(chunk);
     });
     return req.on("end", () => {
+      console.log(body);
       const parsedBody = Buffer.concat(body).toString();
       console.log(parsedBody);
       const message = parsedBody.split("=")[1];
