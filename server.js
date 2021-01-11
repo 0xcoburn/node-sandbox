@@ -1,8 +1,11 @@
+//core modules
 const path = require("path");
 
+//3rd party modules
 const express = require("express");
 const bodyParser = require("body-parser");
 
+//my route imports
 const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 
