@@ -1,0 +1,16 @@
+<%- include('includes/head') %>
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/css/product.css" />
+  </head>
+  <body>
+    <%- include('includes/nav') %>
+    <main>
+      <form class="product-form" action="/admin/add-product" method="POST">
+        <div class="form-control">
+          <label for="product">add product</label>
+          <input type="text" id="product" name="title" />
+        </div>
+        <button type="submit">add product</button>
+      </form>
+    </main>
+  <%- include('includes/footer') %>
