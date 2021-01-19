@@ -8,6 +8,19 @@ main {
   padding: 1rem;
 }
 
+.card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+img {
+  width: 100%;
+}
+
+.product-item {
+  width: 20rem;
+  max-width: 95%;
+}
+
 .main-header {
   width: 100vw;
   height: 3.5rem;
@@ -78,3 +91,5 @@ button:active {
   background-color: #8b5fd1;
   color: white;
 }
+
+//product card
