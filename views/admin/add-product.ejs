@@ -1,9 +1,9 @@
-<%- include('includes/head') %>
+<%- include('../includes/head') %>
     <title><%= pageTitle %></title>
     <link rel="stylesheet" href="/css/product.css" />
   </head>
   <body>
-    <%- include('includes/nav') %>
+    <%- include('../includes/nav') %>
     <main>
       <form class="product-form" action="/admin/add-product" method="POST">
         <div class="form-control">
@@ -13,4 +13,4 @@
         <button type="submit">add product</button>
       </form>
     </main>
-  <%- include('includes/footer') %>
+  <%- include('../includes/footer') %>
