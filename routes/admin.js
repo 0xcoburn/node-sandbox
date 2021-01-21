@@ -13,12 +13,8 @@ router.post("/add-product", productsController.postAddProduct);
 
 router.get("/products", productsController.getAdminProducts);
 
-router.get("/edit-product", (req, res) => {
-  res.render("/edit-product", { path: "admin/products" });
-});
+router.get("/edit-product", productsController.getEditProduct);
 
-router.post("/edit-products", (req, res) => {
-  res.redirect("/admin/products");
-});
+router.post("/edit-product", productsController.postEditProduct);
 
 module.exports = router;
