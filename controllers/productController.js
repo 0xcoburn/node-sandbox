@@ -13,6 +13,13 @@ exports.postAddProduct = (req, res, next) => {
   res.redirect("/");
 };
 
+exports.getAdminProducts = (req, res, next) => {
+  res.render("admin/products", {
+    path: "/admin/products",
+    pageTitle: "Admin Bitch!",
+  });
+};
+
 exports.getProducts = (req, res, next) => {
   const products = Product.fetchAll((products) => {
     res.render("shop/product-list", {
