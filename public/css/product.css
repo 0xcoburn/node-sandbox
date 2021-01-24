@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700") * {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +10,11 @@ body {
 
 main {
   padding: 1rem;
+  margin: auto;
+}
+
+form {
+  display: inline;
 }
 
 .card {
@@ -25,6 +34,9 @@ img {
   width: 100vw;
   height: 3.5rem;
   background-color: rgb(153, 191, 226);
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .main-header__nav {
@@ -68,14 +80,17 @@ img {
 }
 
 .form-control label,
-.form-control input {
+.form-control input,
+.form-control textarea {
   display: block;
   width: 100%;
 }
 
-.form-control input {
+.form-control input,
+.form-control textarea {
   border: 1px solid rgb(153, 191, 226);
   font: inherit;
+  border-radius: 2px;
 }
 button {
   background-color: white;

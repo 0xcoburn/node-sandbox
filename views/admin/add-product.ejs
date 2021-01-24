@@ -6,9 +6,16 @@
     <%- include('../includes/nav') %>
     <main>
       <form class="product-form" action="/admin/add-product" method="POST">
+        <h1>Add Product</h1>
         <div class="form-control">
-          <label for="product">add product</label>
-          <input type="text" id="product" name="title" />
+          <label for="product-title">title</label>
+          <input type="text" id="product-title" name="title" />
+          <label for="product-img">image</label>
+          <input type="text" id="product-img" name="img" />
+          <label for="product-price">price</label>
+          <input type="number" id="product-price" name="price" step="0.01"/>
+          <label for="product-desc">description</label>
+          <textarea id="product-desc" name="desc" rows="5"></textarea>
         </div>
         <button type="submit">add product</button>
       </form>

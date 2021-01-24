@@ -5,8 +5,8 @@ const path = require("path");
 const express = require("express");
 
 //my route imports
-const adminRoutes = require("./routes/admin");
-const shopRoutes = require("./routes/shop");
+const adminRoutes = require("./routes/adminRoutes");
+const shopRoutes = require("./routes/shopRoutes");
 
 const errorController = require("./controllers/errorController");
 
