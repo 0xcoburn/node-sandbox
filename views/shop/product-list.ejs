@@ -1,33 +1,32 @@
 <%- include('../includes/head') %>
-    <title><%= pageTitle %></title>
-    <link rel="stylesheet" href="/css/product.css"
+<link rel="stylesheet" href="/css/product.css">
   </head>
   <body>
     <%- include('../includes/nav')%>
     <main>
       <% if(prods.length > 0) { %>
-            <% for (let product of prods) { %>
-            <article class="card product-item">
-                <header class="card__header">
-                  <h1> <%= product.title %> </h1>
-                </header>
-                <div class="card__image">
-                  <img
-                    src="https://www.telegraph.co.uk/content/dam/Travel/2018/January/white-plane-sky.jpg?impolicy=logo-overlay"
-                    alt="plane"
-                  />
-                </div>
-                <div class="card__content">
-                  <h2>price</h2>
-                  <p>description of product</p>
-                </div>
-                <div class="card__actions">
-                  <form action='/cart' method="POST">
-                    <button class="btn" type="submit">add to cart</button>
-                  </form>
-                </div>
-            </article>
-            <% } %>
+        <div class='grid'>
+          <% for (let product of prods) { %>
+          <article class="card product-item">
+              <header class="card__header">
+                <h1 class='product__title'> <%= product.title %> </h1>
+              </header>
+              <div class="card__image">
+                <img
+                  src="https://www.telegraph.co.uk/content/dam/Travel/2018/January/white-plane-sky.jpg?impolicy=logo-overlay"
+                  alt="plane"
+                />
+              </div>
+              <div class="card__content">
+                <h2 class='product__price'><%= product.price %></h2>
+                <p class='product__description'><%= product.desc %></p>
+              </div>
+              <div class="card__actions">
+                <button class="btn">add</button>
+              </div>
+          </article>
+          <% } %>
+        </div>
       <% } else { %>
         <h1>No products</h1>
         <% } %>

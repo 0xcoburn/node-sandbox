@@ -1,12 +1,12 @@
 <%- include('../includes/head') %>
-    <title><%= pageTitle %></title>
-    <link rel="stylesheet" href="/css/product.css"
+<link rel="stylesheet" href="/css/product.css">
   </head>
   <body>
     <%- include('../includes/nav')%>
     <main>
       <h3>Index</h3>
         <% if(prods.length > 0) { %>
+          <div class='grid'>
             <% for (let product of prods) { %>
             <article class="card product-item">
                 <header class="card__header">
@@ -19,14 +19,15 @@
                   />
                 </div>
                 <div class="card__content">
-                  <h2><%= product.price %></h2>
-                  <p><%= product.desc %></p>
+                  <h2 class='product__price'><%= product.price %></h2>
+                <p class='product__description'><%= product.desc %></p>
                 </div>
                 <div class="card__actions">
                   <button class="btn">add</button>
                 </div>
             </article>
             <% } %>
+          </div>
       <% } else { %>
         <h1>No products</h1>
         
