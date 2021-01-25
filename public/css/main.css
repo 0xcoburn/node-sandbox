@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700") * {
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+* {
   box-sizing: border-box;
 }
 
@@ -46,7 +48,7 @@ form {
 
 .main-header__item a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .main-header__item a:hover,
@@ -96,7 +98,7 @@ form {
 .mobile-nav__item a:active,
 .mobile-nav__item a:hover,
 .mobile-nav__item a.active {
-  background: #00695c;
+  background: #8b5fd1;
   color: white;
   border-radius: 3px;
 }
@@ -117,8 +119,8 @@ form {
 
 #side-menu-toggle:active,
 #side-menu-toggle:hover {
-  color: #ffeb3b;
-  border-color: #ffeb3b;
+  color: #8b5fd1;
+  border-color: #8b5fd1;
 }
 
 .backdrop {
@@ -178,16 +180,16 @@ form {
   padding: 0.25rem 1rem;
   text-decoration: none;
   font: inherit;
-  border: 1px solid #00695c;
-  color: #00695c;
-  background: white;
+  color: #8b5fd1;
+  border: 1px solid #8b5fd1;
+  background-color: white;
   border-radius: 3px;
   cursor: pointer;
 }
 
 .btn:hover,
 .btn:active {
-  background-color: #00695c;
+  background-color: #8b5fd1;
   color: white;
 }
 
