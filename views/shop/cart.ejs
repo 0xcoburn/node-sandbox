@@ -3,6 +3,15 @@
   <body>
     <%- include('../includes/nav') %>
     <main>
-      <h1>Cart</h1>
+      <% if (c.length > 0) { %>
+        <% for (let product of c) { %>
+          <div class = 'cart__product'>
+            <h3><%= product.title %></h3>
+            <h3><%= product.price %></h3>
+          </div>
+       <% } %>
+     <% } else { %>
+      <h1>Cart fart</h1>
+     <% } %>
     </main>
   <%- include('../includes/footer') %>

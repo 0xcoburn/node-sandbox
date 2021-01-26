@@ -175,6 +175,10 @@ form {
   margin: 0 0.25rem;
 }
 
+.cart__product h3 {
+  display: inline;
+}
+
 .btn {
   display: inline-block;
   padding: 0.25rem 1rem;
