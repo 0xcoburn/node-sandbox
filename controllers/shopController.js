@@ -23,8 +23,15 @@ exports.getProductsList = (req, res, next) => {
 exports.getProductById = (req, res, next) => {
   const productId = req.params.productId;
   //get product by id
-  const product = Product.find(productId, (product) => console.log(product));
-  res.redirect("/");
+  const product = Product.find(productId)
+    .then((product) =>
+      res.render("shop/product-detail", {
+        prod: product,
+        pageTitle: "Product Details",
+        path: "/products-list",
+      })
+    )
+    .catch((err) => console.error(err));
 
   //send res.render with product in the {}
 };

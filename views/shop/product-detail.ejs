@@ -5,5 +5,20 @@
     <%- include('../includes/nav') %>
     <main>
       <h1>Product Details</h1>
+      <article class="card product-item">
+        <header class="card__header">
+          <h1 class='product__title'> <%= prod.title %> </h1>
+        </header>
+        <div class="card__image">
+          <img
+            src="https://www.telegraph.co.uk/content/dam/Travel/2018/January/white-plane-sky.jpg?impolicy=logo-overlay"
+            alt="plane"
+          />
+        </div>
+        <div class="card__content">
+          <h2 class='product__price'><%= prod.price %></h2>
+          <p class='product__description'><%= prod.desc %></p>
+        </div>
+        </article>
     </main>
   <%- include('../includes/footer') %>

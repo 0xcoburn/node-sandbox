@@ -1,4 +1,5 @@
 const fs = require("fs");
+const fsPromises = require("fs").promises;
 const path = require("path");
 
 const rootDir = require("../utils/path");
@@ -35,18 +36,16 @@ module.exports = class Product {
     readProductsFromFile(cb);
   }
 
-  static find(id, cb) {
+  static find(id) {
     // return a product with a matching id
 
     //read the db --> fs.readfile
-    fs.readFile(p, (err, data) => {
-      if (err) {
-        return console.error(err);
-      }
-      const products = JSON.parse(data);
-      const prod = products.filter((p) => p.id === id);
-      return cb(prod[0]);
-    });
+    return fsPromises
+      .readFile(p)
+      .then((data) => JSON.parse(data))
+      .then((products) => products.find((p) => p.id === id))
+      .catch((err) => console.error(err));
+
     //parse json
 
     //products = [ of objs]
