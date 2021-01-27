@@ -38,9 +38,9 @@ exports.getProductById = (req, res, next) => {
 };
 
 exports.getCart = (req, res) => {
-  const cart = Cart.getCart();
-
-  res.render("shop/cart", { pageTitle: "Cart", c: cart, path: "/cart" });
+  Cart.getCart().then((cart) => {
+    res.render("shop/cart", { pageTitle: "Cart", c: cart, path: "/cart" });
+  });
 };
 
 exports.postCart = (req, res) => {
